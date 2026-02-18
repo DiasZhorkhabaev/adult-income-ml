@@ -60,6 +60,7 @@ Models evaluated:
 **Model:** Gradient Boosting  
 **ROC-AUC:** ~0.91  
 ![ROC Curve](roc_curve.png)
+
 **Accuracy:** ~0.85  
 **F1-score (>50K):** ~0.70  
 
