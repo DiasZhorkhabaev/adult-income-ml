@@ -1,102 +1,99 @@
-# Adult Income Prediction (ML Project)
+# 💰 Income Prediction using Machine Learning
 
-## 📌 Project Description
-This project predicts whether a person earns more than $50K per year based on demographic and work-related data.
+## 🚀 Project Summary
 
-Dataset: UCI Adult Income Dataset.
+This project predicts whether a person earns more than $50K per year using real-world demographic and employment data (UCI Adult Dataset).
 
-The project covers the full machine learning pipeline:
-- Data cleaning
-- Feature encoding
-- Model training
-- Model evaluation
-- Hyperparameter tuning
-- Threshold optimization
+The objective was to build a complete end-to-end ML pipeline — from raw data cleaning to model optimization and performance tuning.
+
+This project demonstrates practical machine learning skills relevant to real-world business problems such as credit scoring, HR analytics, and customer segmentation.
+
+---
+
+## 🎯 Business Problem
+
+Many companies need to identify high-income individuals for:
+- Credit risk assessment
+- Targeted marketing
+- Financial planning
+- Talent analysis
+
+The goal is to accurately classify individuals earning >50K annually.
 
 ---
 
 ## 📊 Dataset
-- Source: UCI Machine Learning Repository
-- Rows after cleaning: ~30,000
-- Features: 14 (categorical + numerical)
-- Target: income (<=50K / >50K)
+
+- 32,561 original records
+- 30,162 after cleaning
+- Mixed numerical and categorical features
+- Imbalanced target (~24% >50K)
+
+Hidden missing values ("?") were detected and removed.
 
 ---
 
-## ⚙️ Technologies Used
+## 🧠 Approach
+
+### 1️⃣ Data Preprocessing
+- Cleaned hidden missing values
+- One-hot encoding for categorical variables
+- Stratified train/test split
+
+### 2️⃣ Model Development
+Models evaluated:
+- Logistic Regression
+- Random Forest
+- Gradient Boosting
+
+### 3️⃣ Optimization
+- Hyperparameter tuning (GridSearchCV)
+- Cross-validation
+- Feature importance analysis
+- Ablation study
+- Threshold tuning
+
+---
+
+## 📈 Final Model Performance
+
+**Model:** Gradient Boosting  
+**ROC-AUC:** ~0.91  
+**Accuracy:** ~0.85  
+**F1-score (>50K):** ~0.70  
+
+Threshold tuning (0.5 → 0.35) improved minority class performance by ~7%.
+
+---
+
+## 🔍 Key Insights
+
+- Capital gain and marital status strongly influence income prediction.
+- Removing financial-related features reduces model performance significantly.
+- Threshold optimization plays a critical role in imbalanced classification problems.
+- Gradient Boosting performs best on structured tabular data.
+
+---
+
+## 🛠 Tech Stack
+
 - Python
 - Pandas
 - NumPy
 - Scikit-learn
 - Matplotlib
-
----
-
-## 🚀 Project Workflow
-
-1. Data Loading
-2. Data Cleaning (removal of hidden missing values)
-3. One-Hot Encoding
-4. Train/Test Split
-5. Model Training
-6. Model Comparison
-7. Feature Importance Analysis
-8. Hyperparameter Tuning
-9. Threshold Optimization
-
----
-
-## 🤖 Models Tested
-- Logistic Regression
-- Random Forest
-- Gradient Boosting
-
-Best model: Gradient Boosting
-
----
-
-## 📈 Results
-
-| Metric | Value |
-|--------|--------|
-| ROC-AUC | ~0.91 |
-| Accuracy | ~0.85 |
-| F1-score (>50K) | ~0.70 |
-
-Threshold tuning improved F1-score from 0.65 to 0.70.
+- Jupyter Notebook
 
 ---
 
 ## 📁 Project Structure
 
-adult-income-ml/
-├── adult_income.ipynb
-├── README.md
-└── requirements.txt
-
 
 ---
 
-## ▶️ How to Run
+## 👤 About Me
 
-1. Clone repository
-2. Install dependencies:
+Dias Zhorhabayev  
+Aspiring Machine Learning Engineer  
 
-
-pip install -r requirements.txt
-3. Open notebook:
-
-jupyter notebook adult_income.ipynb
-
----
-
-## 📌 Key Insights
-- Marital status and capital gain are strong predictors of income.
-- Feature importance analysis helps interpret model decisions.
-- Threshold tuning significantly improves minority class performance.
-
----
-
-## 👤 Author
-Dias Zhorhabayev
-
+Focused on building practical ML solutions with clear business value.
